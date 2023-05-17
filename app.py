@@ -14,7 +14,7 @@ def allowed_file(filename):
 
 def create_app():
     app = Flask(__name__)
-    @app.route('/upload', methods=['GET', 'POST'])
+    @app.route('/', methods=['GET', 'POST'])
     def upload():
         if request.method == 'POST':
             file = request.files['file']
